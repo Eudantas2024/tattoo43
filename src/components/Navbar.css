@@ -1,0 +1,15 @@
+/* Navbar.css */
+
+/* Mostra em telas pequenas (máx 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+  }
+}
+
+/* Oculta em telas maiores */
+@media (min-width: 769px) {
+  .navbar {
+    display: flex; /* ou block */
+  }
+}
