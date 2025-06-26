@@ -17,6 +17,18 @@ function Portfolio() {
         <div className="col-md-4 mb-3">
           <img src="https://glaminati.com/wp-content/uploads/2023/01/tattoo-ideas-for-men-full-sleeve-mechanic.jpg" className="img-fluid rounded" alt="Tattoo 3" />
         </div>
+                <div className="col-md-4 mb-3">
+          <img src="https://voutatuar.com.br/wp-content/uploads/2022/09/tatuagens-no-ombro-masculina06.jpg" className="img-fluid rounded" alt="Tattoo 3" />
+        </div>
+                <div className="col-md-4 mb-3">
+          <img src="https://voutatuar.com.br/wp-content/uploads/2023/08/tatuagens-femininas1.jpg" className="img-fluid rounded" alt="Tattoo 3" />
+        </div>
+                <div className="col-md-4 mb-3">
+          <img src="https://tachique.com.br/wp-content/uploads/2024/03/tatuagem-no-pescoco-feminina01.jpg" className="img-fluid rounded" alt="Tattoo 3" />
+        </div>
+                <div className="col-md-4 mb-3">
+          <img src="https://letage.com.br/wp-content/uploads/2024/09/image-5.jpeg" className="img-fluid rounded" alt="Tattoo 3" />
+        </div>
       </div>
     </div>
   );

@@ -2,8 +2,21 @@
   max-width: 600px;
   margin: 2rem auto;
   padding: 1rem;
-  background-color: #fff;
+  margin-bottom: 11.5rem;
+  background-color:#fefde2;
   color: #000;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+  background-color: #000 !important;
+  border-color: #000 !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  background-color: #6b6b6b !important; /* Cinza escuro */
+  border-color: #333 !important;
+  color: #fff !important;
 }
