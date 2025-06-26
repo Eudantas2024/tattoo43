@@ -1,49 +1,56 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import { Collapse } from "bootstrap";
 
 const Navbar = () => {
-  return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <Link to="/" className="navbar-brand">
-        Tattoo Art
-      </Link>
+    const collapseRef = useRef(null);
 
-      {/* Botão hamburguer (visível em telas pequenas) */}
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
+    const fecharMenu = () => {
+        if (!collapseRef.current) return;
+        const bsCollapse = Collapse.getInstance(collapseRef.current) || new Collapse(collapseRef.current, { toggle: false });
+        bsCollapse.hide();
+    };
 
-      {/* Links que colapsam no botão hamburguer */}
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav ms-auto">
-          <li className="nav-item">
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/portfolio" className="nav-link">
-              Portfólio
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/cadastro" className="nav-link">
-              Cadastro
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  );
+    return (
+        <>
+            <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                <div className="container">
+                    <Link className="navbar-brand" to="/">
+                        Estúdio Tattoo <span className="logo-numero">43</span>
+                    </Link>
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav" ref={collapseRef}>
+                        <ul className="navbar-nav ms-auto">
+                            <li className="nav-item">
+                                <Link to="/" className="nav-link" onClick={fecharMenu}>Home</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/portfolio" className="nav-link" onClick={fecharMenu}>Portfólio</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/cadastro" className="nav-link" onClick={fecharMenu}>Cadastro</Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            {/* Botão extra para teste */}
+            <button onClick={fecharMenu} style={{ marginTop: "100px" }}>
+                Fechar menu manualmente
+            </button>
+        </>
+    );
 };
 
 export default Navbar;

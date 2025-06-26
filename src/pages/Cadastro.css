@@ -1,0 +1,5 @@
+.container-cadastro {
+  padding-top: 56px; /* Espaço para navbar fixa */
+  max-width: 600px;
+  margin: 0 auto; /* centraliza */
+}
