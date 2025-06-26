@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-light px-3">
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <Link to="/" className="navbar-brand">
         Tattoo Art
       </Link>

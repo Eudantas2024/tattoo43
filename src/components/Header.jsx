@@ -1,12 +1,16 @@
 // src/components/Header.jsx
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
 function Header() {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div className="container">
-        <Link className="navbar-brand" to="/">Estúdio Tattoo</Link>
+        <Link className="navbar-brand" to="/">
+          Estúdio Tattoo <span className="logo-numero">43</span>
+        </Link>
+
 
         {/* Botão hamburguer (visível em telas menores) */}
         <button

@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+/* Pode colocar no App.css ou global.css */
+body {
+  padding-top: 70px; /* Ajuste conforme a altura da navbar */
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -17,6 +23,13 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+
+.logo-numero {
+  font-weight: bold;
+  font-size: 1.9rem; /* ajuste como preferir */
+  color: #9f1818; /* opcional, garante contraste no fundo escuro */
+}
+
 
 @keyframes logo-spin {
   from {
