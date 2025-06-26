@@ -1,5 +1,9 @@
 .container-cadastro {
-  padding-top: 56px; /* Espaço para navbar fixa */
   max-width: 600px;
-  margin: 0 auto; /* centraliza */
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
